@@ -84,7 +84,7 @@ while cntstep < maxsteps
 	else
 		do_shrink = false;
 		% perform a contraction between m and the better of x(n+1) and r
-		if f(r) < x(:, dim + 1)
+		if f(r) < f(x(:, dim + 1))
 			% better than the wrost one
 			c = m + (r - m) ./ 2;
 			if f(c) < f(r)
